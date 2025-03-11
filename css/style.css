@@ -1,0 +1,87 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+  
+  :root{
+    --background: #8babf1;
+    --highlight: #f57600;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--background);
+    font-family: "Montserrat";
+    align-items: center;
+  }
+
+  .radio {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    padding: 10px;
+    /* background: #575294; */
+  }
+
+  .info{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 10px;
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  input[type="submit"], button{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--highlight);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input::file-selector-button{
+    background-color: var(--highlight);
+  }
+
+  input[type="submit"]:hover, button:hover{
+    background-color: #054fb9;
+    color:white;
+  }
+
+  input[type="submit"]{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  button{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
